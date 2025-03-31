@@ -65,7 +65,7 @@ class DonutTile extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
                   Text("Add", style: TextStyle(
