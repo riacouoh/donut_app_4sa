@@ -6,10 +6,10 @@ class PizzaTab extends StatelessWidget {
   //lust of donuts
   final List pizzaOnSale = [
     //donutflabor, price, color, imageName
-    ["Ice Cream", "36", Colors.purple, "lib/images/icecream_donut.png"],
-    ["Strawberry", "45", Colors.orange, "lib/images/strawberry_donut.png"],
-    ["Grape Ape", "84", Colors.lightBlue, "lib/images/grape_donut.png"],
-    ["Choco", "95", Colors.pinkAccent, "lib/images/chocolate_donut.png"]
+    ["Ice Cream", "36", "Pizza Hut", Colors.purple, "lib/images/icecream_donut.png"],
+    ["Strawberry", "45", "Domino's", Colors.orange, "lib/images/strawberry_donut.png"],
+    ["Grape Ape", "84", "wEH", Colors.lightBlue, "lib/images/grape_donut.png"],
+    ["Choco", "95", "Supreme", Colors.pink, "lib/images/chocolate_donut.png"]
   ];
 
   PizzaTab({super.key});
@@ -19,7 +19,8 @@ class PizzaTab extends StatelessWidget {
     return GridView.builder(
       //prepa 1: organizar
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2), //<-- num columnas 
+        crossAxisCount: 2,
+        childAspectRatio: 1/1.5), //<-- num columnas 
       
       //# elementos
       itemCount: 4,
@@ -31,8 +32,9 @@ class PizzaTab extends StatelessWidget {
         return DonutTile (
             donutFlavor: pizzaOnSale[index][0],
             donutPrice: pizzaOnSale[index][1],
-            donutColor: pizzaOnSale[index][2],
-            imageName: pizzaOnSale[index][3]
+            donutStore: pizzaOnSale[index][2],
+            donutColor: pizzaOnSale[index][3],
+            imageName: pizzaOnSale[index][4]
         );
       });
   }
